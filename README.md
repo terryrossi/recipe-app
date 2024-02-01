@@ -5,7 +5,9 @@ Python/Django Recipes Project
 1. fork the repository from: https://github.com/terryrossi/recipe-app
 2. Go to src folder
 3. Create virtual environment: `mkvirtualenv recipe-app`
-4. 
+4. Install Django: `pip install django`
+5. runserver: `python manage.py runserver`
+6. Go to your localhost:8000
 
 
 # Objective
