@@ -36,3 +36,9 @@ class RecipeModelTestCase(TestCase):
         self.assertEqual(self.recipe.userid, self.user)
         self.assertGreater(self.recipe.cooking_time, 0)
         self.assertIn(self.recipe.difficulty, ['easy', 'medium', 'hard'])
+
+    def test_get_absolute_url(self):
+       recipe = Recipe.objects.get(id=1)
+       #get_absolute_url() should take you to the detail page of recipe #1
+       #and load the URL /recipe/1
+       self.assertEqual(recipe.get_absolute_url(), '/recipe/1') 
