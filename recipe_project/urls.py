@@ -20,6 +20,7 @@ from django.urls import include
 
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import login_view, logout_view
 
 urlpatterns = [
     # we specify here that we want to use the admin site
@@ -27,6 +28,9 @@ urlpatterns = [
     # we include the recipes.urls file to specify the URL configuration for the recipes app
     path('', include('recipes.urls')),  
     # path('ingredients/', include('ingredients.urls')),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

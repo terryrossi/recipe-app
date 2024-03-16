@@ -7,12 +7,27 @@ body {
 	background-color: #f8f9fa;
 	color: #333;
 }
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #627589;
+	margin: 20px;
+	position: relative;
+	color: white;
+	z-index: 1;
+}
 
 .page-title {
-	text-align: center;
-	padding: 20px;
+	position: absolute; /* Position the title absolutely within the header */
+	width: 100%; /* Ensure the title spans the full width of the header */
+	left: 0; /* Align the title from the left edge */
+	text-align: center; /* Center the title text */
+	margin: 0; /* Remove default margin */
+	padding: 20px 0; /* Adjust padding as needed */
 	background-color: #627589;
 	color: white;
+	font-size: 24px;
 }
 
 .container {
@@ -118,4 +133,25 @@ body {
 	background-color: #627589;
 	color: white;
 	margin-top: 50px;
+}
+
+.login-button {
+	padding: 10px 20px;
+	margin-left: 10px;
+	background-color: #7e939f;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 2px solid transparent;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.login-button:hover,
+.login-button:focus {
+	background-color: #a7b0ba;
+	color: #ffffff;
+	text-decoration: none;
 }

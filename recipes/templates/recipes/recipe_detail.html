@@ -9,6 +9,23 @@
 			href="{% static 'recipes/css/recipes.css' %}" />
 	</head>
 	<body>
+		<div class="header">
+			{% if not user.is_authenticated %}
+			<a
+				href="{% url 'login' %}"
+				class="login-button"
+				>Login</a
+			>
+			{% else %}
+			<a
+				href="{% url 'logout' %}"
+				class="login-button"
+				>Logout</a
+			>
+			{% endif %}
+			<h1 class="page-title">LES RECETTES DE LUCETTE</h1>
+		</div>
+
 		<div class="container-detail">
 			<div class="recipe-image-detail">
 				<img
