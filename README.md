@@ -65,3 +65,8 @@ The finished application should meet the following technical requirements:
 - Provides an easy-to-use interface, supported by simple forms of input and concise, easy-to-follow instructions. Menus containing features like login and logout must be presented neatly—with concise and easy-to-follow prompts.
 - Code with proper documentation and automated tests is uploaded on GitHub. A “requirements.txt” file is provided, containing the requisite modules for the project.
 - Readme file is provided with instructions on downloading and running the app locally on any machine.
+
+# Installation Requirements
+
+- pip install django
+- In order to use Google Oauth for Login it is required to install django-allauth: pip install django-allauth
