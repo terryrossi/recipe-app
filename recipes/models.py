@@ -21,5 +21,7 @@ class Recipe(models.Model):
     def __str__(self):
         return self.name
     
+    # to redirect to the detail page after creating a new recipe
+    # this is a method that returns the URL to the detail page of the recipe
     def get_absolute_url(self):
         return reverse('recipes:recipe_detail', kwargs={'pk': self.pk})
