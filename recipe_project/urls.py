@@ -32,7 +32,7 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('login/', include('allauth.urls')),
     path('ingredients/', include('ingredients.urls')),
-    path('ingredients/', include(('ingredients.urls', 'ingredients'), namespace='ingredients')),
+    # path('ingredients/', include(('ingredients.urls', 'ingredients'), namespace='ingredients')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

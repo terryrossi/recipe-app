@@ -23,7 +23,7 @@
 			>
 			<p class="username">Welcome, {{ user.username }}</p>
 			{% endif %}
-			<h1 class="page-title">LES RECETTES DE LUCETTE</h1>
+			<h1 class="page-title">INGREDIENTS</h1>
 		</div>
 
 		<div class="recipe-main-image">
@@ -52,14 +52,7 @@
 						alt="{{ ingredient.name }}" />
 				</div>
 				<div class="ingredient-content">
-					<!-- <h2 class="recipe-name">{{ recipe.name }}</h2> -->
-					<h2>
-						<a
-							href="{{ ingredient.get_absolute_url }}"
-							class="ingredient-name"
-							>{{ ingredient.name }}</a
-						>
-					</h2>
+					<h2 class="ingredient-name">{{ ingredient.name }}</h2>
 				</div>
 			</div>
 			{% endfor %}
