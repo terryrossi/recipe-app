@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>Search For Ingredients</title>
+		<link
+			rel="stylesheet"
+			href="{% static 'recipes/css/search.css' %}" />
+	</head>
+	<br />
+	<body>
+		<div class="header">
+			{% if not user.is_authenticated %}
+			<a
+				href="{% url 'login' %}"
+				class="login-button"
+				>Login</a
+			>
+			{% else %}
+			<a
+				href="{% url 'logout' %}"
+				class="login-button"
+				>Logout</a
+			>
+			<p class="username">Welcome, {{ user.username }}</p>
+			{% endif %}
+			<h1 class="page-title">SEARCH</h1>
+		</div>
+		<br />
+		<form
+			style="text-align: center"
+			action=""
+			method="POST">
+			{% csrf_token %} {{form}}
+			<button type="submit">search</button>
+		</form>
+		<br />
+		{% if search_df %} {{search_df |safe}}
+
+		<br />
+		<p style="text-align: center">Cooking time per recipe</p>
+		<img
+			style="text-align: center"
+			src="data:image/png;base64,{{ chart|safe }}" />
+		{% else %}
+
+		<h3>No data. {{ingredient_not_found}} {{recipe_not_found}}</h3>
+		{% endif %}
+	</body>
+</html>

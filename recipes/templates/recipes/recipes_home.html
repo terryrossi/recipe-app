@@ -53,12 +53,8 @@
 				</div>
 				<div class="recipe-content">
 					<!-- <h2 class="recipe-name">{{ recipe.name }}</h2> -->
-					<h2>
-						<a
-							href="{{ recipe.get_absolute_url }}"
-							class="recipe-name"
-							>{{ recipe.name }}</a
-						>
+					<h2 class="recipe-name">
+						<a href="{{ recipe.get_absolute_url }}">{{ recipe.name }}</a>
 					</h2>
 					<p class="recipe-description">{{ recipe.description }}</p>
 					<a

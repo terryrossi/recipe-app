@@ -70,3 +70,5 @@ The finished application should meet the following technical requirements:
 
 - pip install django
 - In order to use Google Oauth for Login it is required to install django-allauth: pip install django-allauth
+- pip install pandas
+- pip install matplotlib

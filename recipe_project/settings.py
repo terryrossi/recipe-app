@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'recipes',
     'users',
     'ingredients',
+
     # Google Social Auth
     'django.contrib.sites',
     'allauth',
