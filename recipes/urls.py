@@ -10,6 +10,6 @@ urlpatterns = [
     # from the views.py file when the user goes to the root URL
     path('',  RecipeListView.as_view(), name='recipes_home'),
     path('recipe/<int:pk>', RecipeDetailView.as_view(), name='recipe_detail'),
-    path('', records, name='records'),
+    # path('', records, name='records'),
     path('search/', records, name='records'),
 ]

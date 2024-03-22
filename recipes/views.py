@@ -19,11 +19,20 @@ class RecipeListView(ListView):
     model = Recipe
     template_name = 'recipes/recipes_home.html'
 
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Recipe.objects.filter(name__icontains=query)
+        else:
+            return Recipe.objects.all()
+         
+
 
 class RecipeDetailView(LoginRequiredMixin, DetailView): #class-based “protected” view
     model = Recipe
     template_name = 'recipes/recipe_detail.html'
 
+@login_required
 def records(request):
     # create an instance of SearchForm and pass it to the template
     form = SearchForm(request.POST or None)
