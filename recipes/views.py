@@ -8,8 +8,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 import pandas as pd
 from .utils import get_username_from_id, get_chart
 
-
-
 #to protect class-based view
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SearchForm
@@ -116,3 +114,7 @@ def records(request):
     # Load the sales/records.html template with the context dictionary
 
     return render(request, 'recipes/records.html', context)
+
+# Create a view for the about me page
+def about_me(request):
+    return render(request, 'recipes/about_me.html')

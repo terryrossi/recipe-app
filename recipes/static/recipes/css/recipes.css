@@ -2,7 +2,7 @@
 
 body {
 	font-family: Arial, sans-serif;
-	margin: 0;
+	margin: 0px 0px 100px 0px;
 	padding: 0;
 	background-color: #f8f9fa;
 	color: #333;
@@ -12,7 +12,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	background-color: #627589;
-	margin: 20px;
+	margin: 20px 20px 0px 20px;
 	position: relative;
 	color: white;
 	z-index: 1;
@@ -144,7 +144,10 @@ a {
 	padding: 20px;
 	background-color: #627589;
 	color: white;
-	margin-top: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 }
 
 .login-button {
@@ -166,4 +169,213 @@ a {
 	background-color: #a7b0ba;
 	color: #ffffff;
 	text-decoration: none;
+}
+
+.other-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #627589;
+	margin: 0px 20px 20px 20px;
+	position: relative;
+	color: white;
+	z-index: 1;
+}
+.other-button {
+	padding: 10px 20px;
+	margin-left: 10px;
+	background-color: #7e939f;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 2px solid transparent;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.other-button:hover,
+.other-button:focus {
+	background-color: #a7b0ba;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Hamburger Menu CSS */
+.menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	z-index: 2;
+}
+
+.menu-icon .nav-icon {
+	background-color: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background 0.2s ease-out;
+	width: 18px;
+}
+
+.menu-icon .nav-icon:before,
+.menu-icon .nav-icon:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	width: 100%;
+}
+
+.menu-icon .nav-icon:before {
+	top: 5px;
+}
+
+.menu-icon .nav-icon:after {
+	top: -5px;
+}
+
+/* Transform the hamburger icon into an "X" when clicked */
+#menu-toggle:checked + .menu-icon .nav-icon {
+	background: transparent;
+}
+
+#menu-toggle:checked + .menu-icon .nav-icon:before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+#menu-toggle:checked + .menu-icon .nav-icon:after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+/* Menu */
+.menu {
+	display: none;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	z-index: 2;
+}
+
+#menu-toggle:checked ~ .menu {
+	display: block;
+}
+
+/* About Me Page Styles */
+.about-me {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-me h1 {
+	color: #333;
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.about-me p {
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.about-me ul {
+	list-style: none;
+	padding: 0;
+}
+
+.about-me li {
+	margin-bottom: 10px;
+}
+
+.about-me a {
+	color: #007bff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.about-me a:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
+
+.profile-section {
+	display: flex;
+	align-items: center; /* Align items vertically */
+	gap: 20px; /* Add some space between the image and the content */
+}
+
+.profile-picture img {
+	width: 200px; /* Adjust the width as needed */
+	height: auto;
+	border-radius: 7%; /* Creates a circular image */
+}
+
+.profile-content {
+	max-width: calc(100% - 170px); /* Adjust based on the image width and gap */
+}
+
+.ingredient-card {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.ingredient-image img {
+	display: block; /* Ensure the image is a block element to center it */
+	max-height: 150px; /* Image takes up to 75% of its container's width */
+	max-width: auto;
+	margin-top: 10px;
+	margin-left: auto; /* Center the image horizontally */
+	margin-right: auto; /* Center the image horizontally */
+
+	border-radius: 9px;
+}
+
+.ingredient-image-detail img {
+	display: block; /* Ensure the image is a block element to center it */
+	max-height: auto; /* Image takes up to 75% of its container's width */
+	max-width: 75%;
+	margin: 0 auto; /* Center the image horizontally */
+	border-radius: 9px;
+}
+
+.ingredient-content {
+	padding: 15px;
+}
+
+.ingredient-content-detail {
+	padding: 15px;
+	max-width: 75%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.ingredient-content-detail ul {
+	text-align: center;
+	list-style-type: none;
+}
+
+.ingredient-name {
+	text-align: center;
+	/* font-size: 1.2rem; */
+	text-decoration: none;
+	color: coral;
+	margin-bottom: 5px;
+}
+
+.ingredient-description {
+	font-size: 0.9rem;
+	margin-bottom: 10px;
 }
